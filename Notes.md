@@ -13,11 +13,11 @@ An autonomous system number (ASN) is a global identifier of a range of IP addres
 We can use the IP address into an ASN lookup tool such as [ultratools](https://www.ultratools.com/tools/asnInfo), Which tells us they have the `ASN AS14061`
 
 Google Search Report for `AS14061` shows that this is `DigitalOcean ASN` number.
-![](Pasted image 20210206170930.png)
+![[Pasted image 20210206170930.png]]
 
 On Shodan.io we can use ASN filter for searching for specific `ASN` devices numbers. The Filter is `ASN: [number]` which in our case it become `ASN:AS14061`
 
-![](Pasted image 20210206171531.png)
+![[Pasted image 20210206171531.png]]
 
 Query URL: [here](https://www.shodan.io/search?query=ASN%3AAS14061)
 
@@ -41,7 +41,7 @@ An example of banner
 		"location": {
 				"country_code": "SG"
 		}
-}
+ }
 ```
 
 this is an output of a single port, which includes information about the IP and authentication details.
@@ -56,7 +56,7 @@ AS15169
 ```
 2000
 ```
-![](Pasted image 20210206172807.png)
+![[Pasted image 20210206172807.png]]
 
 3. Where are the most of the machines on this ASN number, physically in the world?
 ```
@@ -66,17 +66,17 @@ United States
 ```
 SSH
 ```
-![](Pasted image 20210206173209.png)
+![[Pasted image 20210206173209.png]]
 5. What SSH product does Google use?
 ```
 OpenSSH
 ```
-![](Pasted image 20210206173500.png)
+![[Pasted image 20210206173500.png]]
 6. What is Google's most used Google product, according to this search ? Ignore the work "Google" in front of it.
 ```
 cloud
 ```
-![](Pasted image 20210206173628.png)
+![[Pasted image 20210206173628.png]]
 
 ## Filters
 On the Shodan.io homepage, we can click on "explore" to view the most up voted search queries. The most popular one is webcams. [here](https://www.shodan.io/explore)
@@ -96,7 +96,7 @@ asn:AS14061 product:MySQL
 ```
 
 And YAY! We have `MYSQL` servers on the TryHackMe ASN (which is really the DigitalOcean ASN). [here](https://www.shodan.io/search?query=asn%3AAS14061+product%3AMySQL)
-![](Pasted image 20210206174830.png)
+![[Pasted image 20210206174830.png]]
 
 We have some amazing filter called `vuln`
 Let's search for Eternal Blue Vulnerable Devices.
